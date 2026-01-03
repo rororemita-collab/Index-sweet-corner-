@@ -142,7 +142,7 @@ if(isset($_POST['send'])){
  <div class="footer-bottom">
     <p><b>© 2026 My Shop. The Sweet Corner.</b></p> </div>
 
-Partie CSS
+Partie CSS index
 
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
