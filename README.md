@@ -1,32 +1,15 @@
-# Index-sweet-corner-
-<?php
-include "config.php";
-
-if(isset($_POST['send'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    $sql = "INSERT INTO contacts(name,email,message) 
-            VALUES('$name','$email','$message')";
-    if(mysqli_query($conn,$sql)){
-        echo "<script>alert('Message sent successfully!');</script>";
-    }else{
-        echo "Error: ".mysqli_error($conn);
-    }
-}
-?>
+<?php include "config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sweet</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-     <header>
+   <header>
+    
     <nav class="navbar">
             <a href="#"class="nav-logo">
         <h2 class="logo-text">🧇The Sweet Corner</h2>
@@ -54,62 +37,44 @@ if(isset($_POST['send'])){
         <li class="nav-item">
             <a href="contactus.php"class="nav-link">contact us
 </a>
+<li class="nav-item">
+            <a href="admin.php"class="nav-linkk">👤
+</a>
 
-        </li>
-    
+
+  
 
          </ul>   
         
  
 
     </nav>
-   </header>
+   </header> 
+   <main>
+    <section class="hero-section">
+        <div class="section-content">
+            <div class="hero-details">
+                <h2 class="title">Welcome</h2>
+                <h3 class="subtitle">make your day great with our special sweet</h3><br>
+                <p class="descrption">
 
 
+  Welcome to our shop! We are delighted to have you here <br>
+   and invite you to explore our products.
+  Our goal is to offer you quality, comfort,<br> and a pleasant experience every time you visit us.
+</p>
+<div class="buttons">
+    <a href="menu.php" class="button">Order Now</a>
+        <a href="contactus.php" class="contactus">Contact Us</a>
+</div>          
+</div>
 
 
-<section class="contact-container">
+        </div>
 
-    <!-- Contact Information -->
+    </section>
+   </main>
    
-    <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p><strong>📍 Address:</strong> Rue 21 xxx, Skikda</p>
-        <p><strong>📞 Phone:</strong> 05 xx xx xx xx</p>
-        <p><strong>📧 Email:</strong> thesweetcorner21@email.com</p>
-
-        <h3>🕒 Working Hours</h3>
-        <ul>
-            <li>Saturday – Thursday: <span>08:00 AM – 10:00 PM</span></li>
-            <li>Friday: <span>02:00 PM – 10:00 PM</span></li>
-        </ul>
-    </div>
-
-    <!-- Contact Form -->
-    <!-- Form -->
-<form action="" method="POST" class="contact-form">
-<label><b>Name:</b></label>
-<input type="text" name="name" required><br><br>
-<label><b>Email:</b></label>
-<input type="email" name="email" required><br><br>
-<label><b>Message:</b></label>
-<textarea name="message" required></textarea><br><br>
-<button type="submit" name="send">Send</button>
-</form>
-
-</section>
-
-<!-- Map Section -->
-<section class="map-section">
-    <h2>📍 Find Us</h2>
-    <div class="map-container">
-       <iframe
-  src="https://www.google.com/maps?q=Skikda,+Algeria&output=embed"
-  loading="lazy"
-  allowfullscreen>
-</iframe>
-    </div>
-</section>
 
 <footer class="footer">
   <div class="footer-box">
@@ -138,11 +103,12 @@ if(isset($_POST['send'])){
     </ul>
   </div>
   
+  
 </footer>
  <div class="footer-bottom">
     <p><b>© 2026 My Shop. The Sweet Corner.</b></p> </div>
+    partie CSS
 
-Partie CSS index
 
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
@@ -160,6 +126,7 @@ Partie CSS index
     margin: 0;
     font-family:  "Playfair Display", serif;
 }
+ /* PAGE 1 */
 
 body{
 
@@ -227,6 +194,17 @@ header .navbar{
   transition: 0.3s ease;
 
 }
+.navbar .nav-menu .nav-linkk{
+   padding: 10px 10px;
+  color: rgb(12, 12, 12);
+  background-color: hsl(300, 4%, 5%);
+  border-radius: 50px;
+  transition: 0.3s ease;
+
+}
+
+
+
 
 
 
@@ -333,6 +311,9 @@ main{
   color:black;
 }
 
+ 
+
     
+
 </body>
 </html>
